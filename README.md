@@ -102,8 +102,8 @@ Item Not Found (404 Not Found)
 - Maven
 
 Steps:
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/Vanshita-baghel/item-management-api
+cd item-management-api
 mvn spring-boot:run
 Application will start at:
 http://localhost:8080
@@ -111,7 +111,7 @@ http://localhost:8080
 
 🌐 Live Deployment
 Base URL (Live):
-https://<your-app-name>.onrender.com
+https://item-management-api-ikho.onrender.com
 Note: Since the application uses in-memory storage, all data will reset if the service  
 restarts.
 
