@@ -120,7 +120,7 @@
         <h2>About the API</h2>
         <p>
             This is a RESTful API built using <strong>Spring Boot</strong> that allows
-            clients to perform basic CRUD operations on items.
+            clients to perform basic GET and POST operations on items.
             It is designed to be lightweight, scalable, and easy to integrate.
         </p>
     </div>
@@ -138,53 +138,41 @@
         <h2>Available APIs</h2>
 
         <div class="endpoint">
-            <p><span class="method">GET</span> <code>/api/items/{id}</code></p>
+            <p><span class="method">GET</span> <code>/api/item/{id}</code></p>
             <pre>{
-  "id": 1,
-  "name": "Laptop",
-  "price": 50000
-}</pre>
+                "id":1,
+                "name":"renolds pen",
+                "description":"smooth writing ",
+                "price":20.0,
+                "stockQuantity":100.0
+            }</pre>
         </div>
 
-        <div class="endpoint">
-            <p><span class="method">GET</span> <code>/api/items</code></p>
-            <pre>[
-  {
-    "id": 1,
-    "name": "Laptop",
-    "price": 50000
-  }
-]</pre>
-        </div>
 
         <div class="endpoint">
             <p><span class="method">POST</span> <code>/api/items</code></p>
             <pre>{
-  "name": "Phone",
-  "price": 20000
-}</pre>
+                "name":"renolds pen",
+                "description":"smooth writing ",
+                "price":20.0,
+                "stockQuantity":100.0
+            }</pre>
         </div>
 
-        <div class="endpoint">
-            <p><span class="method">PUT</span> <code>/api/items/{id}</code></p>
-            <pre>{
-  "name": "Updated Item",
-  "price": 25000
-}</pre>
-        </div>
-
-        <div class="endpoint">
-            <p><span class="method">DELETE</span> <code>/api/items/{id}</code></p>
-        </div>
     </div>
 
     <div class="section">
         <span class="badge">Usage</span>
         <h2>Sample cURL Request</h2>
 
-        <pre>curl -X POST https://item-management-api-ikho.onrender.com/api/items \
--H "Content-Type: application/json" \
--d '{"name":"Phone","price":20000}'</pre>
+        <pre>curl -X POST https://item-management-api-ikho.onrender.com/api/item \
+        -H "Content-Type: application/json" \
+        -d '{
+            "name":"renolds pen",
+            "description":"smooth writing ",
+            "price":20.0,
+            "stockQuantity":100.0
+        }'</pre>
     </div>
 
 </div>
