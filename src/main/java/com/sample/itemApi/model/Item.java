@@ -11,21 +11,22 @@ import lombok.Data;
 public class Item {
 
     //id is generated on server side for preventing user manipulation
-    // @NotBlank(message = "id cannot be null")
+    
     private Long id;
 
     @Size(max = 100, min = 2)
     private String name;
     
-    @NotBlank(message = "description can not be null")
+    @NotBlank(message = "description can't be null")
     private String description;
 
-    @NotNull(message = "Price is a required !!")
+    @NotNull(message = "Price is required !!")
     @Positive(message = "price must be a positive value")
-    private double price;
+    private Double price;
 
-    @NotNull(message = "stock quantity can not be null")
+    @NotNull(message = "stock quantity can't be null")
     @Min(0)
+    @NotBlank(message = "sock can't be blank")
     private Integer stockQuantity;
     
 }
